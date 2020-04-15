@@ -1,13 +1,13 @@
 {% set name = "pdoc3" %}
-{% set version = "0.7.2" %}
+{% set version = "0.8.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: "df43a7f1a139a5a61e778f424f167719acc33ed71bf13b6c34c7ebd139866eb7"
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 793e7a83db96fc7a992bc593265a0963d0bdf7d66a1dd5d443a6c6ea885b73be
 
 build:
   number: 0
@@ -15,7 +15,7 @@ build:
   entry_points:
     - pdoc = pdoc.cli:main
     - pdoc3 = pdoc.cli:main
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   host:
@@ -42,11 +42,11 @@ test:
     - python -m pdoc.test.__init__
 
 about:
-  home: "https://pdoc3.github.io/pdoc/"
-  license: "GNU Affero General Public v3 or later (AGPLv3+)"
-  license_family: "AGPL"
-  license_file: "LICENSE.txt"
-  summary: "Auto-generate API documentation for Python projects."
+  home: https://pdoc3.github.io/pdoc/
+  license: GNU Affero General Public v3 or later (AGPLv3+)
+  license_family: AGPL
+  license_file: LICENSE.txt
+  summary: Auto-generate API documentation for Python projects.
 
 extra:
   recipe-maintainers:
