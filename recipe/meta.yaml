@@ -1,5 +1,5 @@
 {% set name = "pdoc3" %}
-{% set version = "0.8.1" %}
+{% set version = "0.8.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d7b56e67b5e049d53dcde94245a28040b640b2e06c344fc58ab2bdf2d91dc00f
+  sha256: fa8b851e0bdef77c37115e54ec55d6aed862d8bd4e865fd0f72ed058113c2e93
 
 build:
   number: 0
