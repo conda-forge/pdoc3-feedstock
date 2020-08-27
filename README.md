@@ -5,7 +5,7 @@ Home: https://pdoc3.github.io/pdoc/
 
 Package license: GNU Affero General Public v3 or later (AGPLv3+)
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Auto-generate API documentation for Python projects.
 
