@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 20bf2aad8110892573fd350b1bf95f6612b53b55e29b0fc143b5f2b5bcbabfb6
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - pdoc = pdoc.cli:main
@@ -22,15 +22,17 @@ requirements:
     - mako
     - markdown >=3.0
     - pip
-    - python >=3.5
+    - python {{ python_min }}
     - setuptools_scm
     - setuptools-git
   run:
     - mako
     - markdown >=3.0
-    - python >=3.5
+    - python >={{ python_min }}
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pdoc
     - pdoc.cli
